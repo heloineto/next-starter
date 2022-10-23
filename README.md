@@ -31,7 +31,7 @@ To always have an up-to-date project, verify when this template was last updated
     Install `eslint-config-prettier`. [See more.](https://prettier.io/docs/en/integrating-with-linters.html)
 
     ```bash
-    npm install --save-dev eslint-config-prettier
+    pnpm i -D eslint-config-prettier
     ```
 
     Notes:
@@ -43,7 +43,7 @@ To always have an up-to-date project, verify when this template was last updated
     Install ESLint Plugin TypeScript. [Instructions here.](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
 
     ```bash
-    pnpm i @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+    pnpm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser`
     ```
 
 1.  Add Husky and lint-staged
