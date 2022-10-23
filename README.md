@@ -6,66 +6,47 @@ Tech Stack:
 
 ## How to re-create it
 
-1.  You can create a TypeScript project with `create-next-app` using the `--ts`, `--typescript` flag. [Instructions here](https://nextjs.org/docs/basic-features/typescript)
+1.  You can create a TypeScript project with `create-next-app` using the `--ts`, `--typescript` flag. [Instructions here.](https://nextjs.org/docs/basic-features/typescript)
 
-    ```
+    ```shell
     pnpm create next-app --ts next-starter
     ```
 
 1.  Install Tailwind. [Instructions here](https://tailwindcss.com/docs/guides/nextjs)
 
-    - Remember to use `pnpm` instead of `npm`
+    Remember to use `pnpm` instead of `npm`
 
-    - Add automatic tailwind class sorting with prettier. [Instructions here](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
+    Add automatic tailwind class sorting with prettier. [Instructions here](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
 
-      ```
-      pnpm install -D prettier prettier-plugin-tailwindcss
-      ```
-
-1.  Prettier configuration (`.prettierrc`)
-
-    - Trailing commas improve developer experience. [See why](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
-
-    - Use double quotes to be consistent with HTML
-
-    ```js
-    {
-      "useTabs": true,
-      "singleQuote": false,
-      "trailingComma": "es5",
-      "printWidth": 100
-    }
+    ```shell
+    pnpm i -D prettier prettier-plugin-tailwindcss
     ```
 
-1.  ESLint configuration
+1.  Configure Prettier. [See configuration.](./.prettierrc)
 
-    - Extend these extra rulesets
-    - Add `parserOptions.project` and `ignorePatterns` to fix some bugs
+    Install `eslint-config-prettier`. [See more](https://prettier.io/docs/en/integrating-with-linters.html)
 
-      ```js
-      // .eslintrc.cjs
+    ```bash
+    npm install --save-dev eslint-config-prettier
+    ```
 
-      module.exports = {
-         ...
-         extends: [
-         "eslint:recommended",
-         "plugin:@typescript-eslint/recommended",
-         "plugin:@typescript-eslint/strict",
-         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-         "prettier",
-         ],
-         parserOptions: {
-            sourceType: "module",
-            ecmaVersion: 2020,
-            project: "./tsconfig.json",
-         },
-         ignorePatterns: ["*.cjs", "playwright.config.ts", "svelte.config.js"],
-      }
-      ```
+    configuration (`.prettierrc`)
+
+    Notes:
+
+    Trailing commas improve developer experience. [See why](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
+
+1.  Configure ESLint. [See configuration.](./.eslintrc.json)
+
+    Install ESLint Plugin TypeScript. [Instructions here.](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+
+    ```bash
+    pnpm i @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+    ```
 
 1.  Add Husky and lint-staged
 
-    - Instructions to install husky [here](https://typicode.github.io/husky/#/?id=install)
+    Install husky. [Instructions here.](https://typicode.github.io/husky/#/?id=install)
 
     ```bash
     pnpm i -D lint-staged husky
@@ -73,7 +54,7 @@ Tech Stack:
     pnpm dlx husky add .husky/pre-commit "pnpm dlx lint-staged"
     ```
 
-    - Add lint-staged configuration
+    -   Add lint-staged configuration
 
     ```json
     // .lintstagedrc.json
