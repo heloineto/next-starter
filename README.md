@@ -4,6 +4,10 @@ Tech Stack:
 
 [Next.js](https://nextjs.org/) | [TypeScript](https://www.typescriptlang.org/) | [ESLint](https://eslint.org/) | [Prettier](https://prettier.io/) | [Tailwind CSS](https://tailwindcss.com/) | [pnpm]()
 
+Note:
+
+To always have an up-to-date project, verify when this template was last updated. If you believe it was too long ago, consider recreating it following (and changing if necessary) the steps below.
+
 ## How to re-create it
 
 1.  You can create a TypeScript project with `create-next-app` using the `--ts`, `--typescript` flag. [Instructions here.](https://nextjs.org/docs/basic-features/typescript)
@@ -12,7 +16,7 @@ Tech Stack:
     pnpm create next-app --ts next-starter
     ```
 
-1.  Install Tailwind. [Instructions here](https://tailwindcss.com/docs/guides/nextjs)
+1.  Install Tailwind. [Instructions here.](https://tailwindcss.com/docs/guides/nextjs)
 
     Remember to use `pnpm` instead of `npm`
 
@@ -24,13 +28,11 @@ Tech Stack:
 
 1.  Configure Prettier. [See configuration.](./.prettierrc)
 
-    Install `eslint-config-prettier`. [See more](https://prettier.io/docs/en/integrating-with-linters.html)
+    Install `eslint-config-prettier`. [See more.](https://prettier.io/docs/en/integrating-with-linters.html)
 
     ```bash
     npm install --save-dev eslint-config-prettier
     ```
-
-    configuration (`.prettierrc`)
 
     Notes:
 
@@ -48,21 +50,7 @@ Tech Stack:
 
     Install husky. [Instructions here.](https://typicode.github.io/husky/#/?id=install)
 
-    ```bash
-    pnpm i -D lint-staged husky
-    pnpm dlx husky install
-    pnpm dlx husky add .husky/pre-commit "pnpm dlx lint-staged"
-    ```
-
-    -   Add lint-staged configuration
-
-    ```json
-    // .lintstagedrc.json
-
-    {
-    	"**/*.{html,js,svelte,ts}": ["pnpm lint:fix", "pnpm lint", "pnpm check"]
-    }
-    ```
+    Add lint-staged. [Instructions here.](https://www.npmjs.com/package/lint-staged)
 
 1.  Add vscode settings & extensions
 
