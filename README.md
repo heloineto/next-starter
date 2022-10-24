@@ -4,9 +4,17 @@ Tech Stack:
 
 [Next.js](https://nextjs.org/) | [TypeScript](https://www.typescriptlang.org/) | [ESLint](https://eslint.org/) | [Prettier](https://prettier.io/) | [Tailwind CSS](https://tailwindcss.com/) | [pnpm]()
 
+## How to use it
+
+To use this starter, run the following command to create your Next.js app:
+
+```sh
+pnpm create next-app my-app -e https://github.com/heloineto/next-starter.git
+```
+
 Note:
 
-To always have an up-to-date project, verify when this template was last updated. If you believe it was too long ago, consider recreating it following (and changing if necessary) the steps below.
+To have an up-to-date project, verify when this template was last updated. If you believe it was too long ago, consider recreating it following (and changing if necessary) the steps below.
 
 ## How to re-create it
 
