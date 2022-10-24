@@ -9,7 +9,7 @@ Tech Stack:
 To use this starter, run the following command to create your Next.js app:
 
 ```sh
-pnpm create next-app my-app -e https://github.com/heloineto/next-starter.git
+pnpm create next-app my-app -e https://github.com/heloineto/next-starter
 ```
 
 Note:
